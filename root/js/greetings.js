@@ -1,4 +1,4 @@
-  fetch('/root/json/greetings.json')
+  fetch('/json/greetings.json')
   .then(response => response.json())
   .then(data => {
     // Get a random greeting from the array
