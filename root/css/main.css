@@ -212,7 +212,7 @@ iframe {
     
         '⬅️ ⏹️ ➡️';
     
-        grid-template-columns: 1fr 420px 1fr;
+        grid-template-columns: 1fr 390px 1fr;
     }
 }
 /* Scrollbar crated with chatgpt */
