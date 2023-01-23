@@ -194,6 +194,7 @@ iframe {
 @media screen and (max-width: 1130px) {
     .desktopmenu {
         display: none;
+
         
     }
 }
@@ -201,6 +202,14 @@ iframe {
 @media screen and (min-width: 1130px) {
     .mobile-menu {
         display: none;
+
+    }
+}
+/* 🖥️ Show background for menu-grid on mobile*/
+@media screen and (max-width: 1130px) {
+    .menu-grid {
+        background-color: #1F1F1F;
+        z-index: 4;
     }
 }
 /* 🖥️ Make body grid respond to the same styling as the mobile-menu, only when screen size is small*/
@@ -212,7 +221,19 @@ iframe {
     
         '⬅️ ⏹️ ➡️';
     
-        grid-template-columns: 1fr 390px 1fr;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+}
+/* 🖥️ Make body grid respond to the same styling as the mobile-menu, only when screen size is small*/
+@media screen and (max-width: 530px) {
+    .body-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 
+    
+        '⬅️ ⏹️ ➡️';
+    
+        grid-template-columns: 5px 1fr 5px;
     }
 }
 /* Scrollbar crated with chatgpt */
