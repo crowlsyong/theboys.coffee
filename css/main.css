@@ -1,0 +1,247 @@
+/* ⏏️Import google fonts: Inter, Kumbh Sans, Plus Jakarta Sans, and Open Sans. Should place fallbacks like arial/sans serif. */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans&family=Plus+Jakarta+Sans&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+
+/* ---------- 🖼️ Main Styles ---------- */
+
+/* autodark theme for scroll bar/ui */
+:root {
+    color-scheme: dark;
+  }
+  
+  .container {
+    padding: 25px;
+    height: 2000px;
+  }
+.logo-box {
+    display: flex;
+    flex: auto;
+    padding-left: 20px;
+    align-content: top;
+
+}
+.menu-grid {
+    position: fixed;
+    width: 100%;
+    background-color: #1f1f1f;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-areas: 
+
+    '↖️ ⬆️ ↗️';
+
+    grid-template-rows: 80px;
+    grid-template-columns: 190px 1fr 190px;
+}
+.mobile-menu {
+    display: grid;
+    background-color: #202124;
+    gap: 1rem;
+    grid-template-areas: 
+
+    '⬅️ ⏹️ ➡️';
+
+    align-items: center;
+    grid-template-rows: 60px;
+    grid-template-columns: 1fr 450px 1fr;
+}
+.body-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+
+    '⬅️ ⏹️ ➡️';
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr minmax(500px, 700px) 1fr;
+}
+body {
+    background: #1F1F1F;
+    margin: 0px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+
+}
+
+  
+/* ---------- 🎨 TEXT STYLES ---------- */
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+a:hover, a:active, a:focus {
+    color: #6E99E0;
+    font-weight: bold;
+}
+p {
+    color: #fff; /* make the text color white */
+    padding: 0px 0px 0px 0px; /* add some padding to the section */
+    margin: 0px 0px 0px 0px;
+    font-family: 'Lato', 'inter' 'Open Sans' 'arial' sans-serif;
+    font-size: small;
+    font-weight: 400;
+}
+.psub {
+    font-size: medium;
+    color: gray;
+}
+.bottomright {
+    position: fixed;
+    right: 5px; bottom: 5px;
+    padding: 5px;
+    background-color: #4d65e0;
+  }
+.bottomright:hover span {
+    display: none
+  }
+.bottomright:hover:before {
+    content: "kcabdeef"
+  }
+h1 {
+    color: #fff; /* make the text color white */
+    padding: 5px 0 0 0; /* add some padding to the section */
+    font-family: 'Plus Jakarta Sans', 'inter' 'Open Sans' 'arial' sans-serif;
+    font-size: xx-large;
+    font-weight: 800;
+}
+h2 {
+    color: #fff; /* make the text color white */
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-family: 'Plus Jakarta Sans', 'inter' 'Open Sans' 'arial' sans-serif;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0px;
+
+}
+h3 {
+    color: #fff; /* make the text color white */
+    font-family: 'Plus Jakarta Sans', 'inter' 'Open Sans' 'arial' sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px; /* add some padding to the section */
+    margin: 15px 0px 15px 0px;
+}
+h4 {
+    color: #fff; /* make the text color white */
+    padding: 5px 0px 5px 0px; /* add some padding to the section */
+    font-family: 'Plus Jakarta Sans', 'inter' 'Open Sans' 'arial' sans-serif;
+    font-size: large;
+    font-weight: 500;
+    margin: 0px;
+
+}
+h5 {
+    color: #fff; /* make the text color white */
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin: 0px;
+
+}
+h6 {
+    color: #fff; /* make the text color white */
+    padding: 5px; /* add some padding to the section */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: small;
+    font-weight: 400; 
+    margin: 0px;
+
+}
+button {
+    border-radius: 5px;
+    background-color: #4d65e0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    font-weight: 400;
+    font-size: 1rem;
+    width: fit-content;
+    height: 50px;
+    border-width: 0px;
+    padding: 5px 40px 5px 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+button:hover {
+    background-color: #3952ca;
+}
+button:active {
+    background-color: #7081d6;
+
+}
+div {
+    margin: 0px;
+    padding: 0px;
+}
+iframe {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
+}
+/* ---------- 📲 RESPONSIVE STUFF ---------- */
+
+/* 🖥️ Show desktop menu text when bigger than 1130 */
+@media screen and (max-width: 1130px) {
+    .desktopmenu {
+        display: none;
+        
+    }
+}
+/* 🖥️ Show mobile menu text when smaller than 1130*/
+@media screen and (min-width: 1130px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+/* 🖥️ Make body grid respond to the same styling as the mobile-menu, only when screen size is small*/
+@media screen and (max-width: 1130px) {
+    .body-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 
+    
+        '⬅️ ⏹️ ➡️';
+    
+        grid-template-columns: 1fr 420px 1fr;
+    }
+}
+/* Scrollbar crated with chatgpt */
+/* Query: create css for a beautiful dark theme scroll bar. make it thin and transparent */
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track (the background) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1); /* Transparent white */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Handle (the thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.2); /* Slightly more visible on hover */
+  }
+  
+  /* Handle (the thumb) of the scrollbar when clicked on */
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(255,255,255,0.3); /* More visible when clicked on */
+  }
+  
+  /* Track (the background) of the scrollbar when clicked on */
+  ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.3); /* Dark background */
+  }
+  

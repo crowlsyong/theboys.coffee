@@ -1,0 +1,11 @@
+{
+    "prompts": [
+      "What is the weather like today?",
+      "What is the time now?",
+      "What are the latest news today?",
+      "What is the current temperature?"
+    ],
+    "max_tokens": 100,
+    "temperature": 0.7
+  }
+  
